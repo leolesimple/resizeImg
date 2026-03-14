@@ -1,16 +1,16 @@
 # resizeImg
 
-A macOS utility to batch resize and convert images to WebP using native Finder dialogs.
+Utilitaire macOS pour redimensionner et convertir des images en WebP par lot, via des dialogues Finder natifs.
 
-## About
+## À propos
 
-`resizeImg` lets you select one or more images through a native macOS file picker, choose a target width and a compression mode (lossless or lossy at 75% quality), and exports everything as `.webp` into a `resize-output/` directory next to the source files.
+`resizeImg` permet de sélectionner une ou plusieurs images depuis le Finder, de choisir une largeur cible et un mode de compression (lossless ou lossy à 75%), puis exporte le tout en `.webp` dans un dossier `resize-output/` situé à côté des fichiers source.
 
-## Prerequisites
+## Prérequis
 
 - macOS
 - [Homebrew](https://brew.sh)
-- `webp` package (provides `cwebp` and `dwebp`):
+- Le paquet `webp` (fournit `cwebp` et `dwebp`) :
 
 ```bash
 brew install webp
@@ -18,13 +18,13 @@ brew install webp
 
 ## Installation
 
-Clone the repository:
+Cloner le dépôt :
 
 ```bash
 git clone https://github.com/TON_USER/resizeImg.git
 ```
 
-Copy the script to a directory in your `PATH`:
+Copier le script dans un répertoire du `PATH` :
 
 ```bash
 mkdir -p ~/.local/bin
@@ -32,33 +32,33 @@ cp resizeImg/resizeImg.sh ~/.local/bin/resizeImg
 chmod +x ~/.local/bin/resizeImg
 ```
 
-If `~/.local/bin` is not in your `PATH`, add it:
+Si `~/.local/bin` n'est pas dans le `PATH`, l'ajouter :
 
 ```bash
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
-## Usage
+## Utilisation
 
 ```bash
 resizeImg
 ```
 
-1. A Finder dialog opens to select one or more images
-2. Enter the target width in pixels
-3. Choose the compression mode: **Lossless** or **Lossy (75%)**
-4. Converted `.webp` files are saved in a `resize-output/` folder next to the originals
+1. Un dialogue Finder s'ouvre pour sélectionner une ou plusieurs images
+2. Saisir la largeur cible en pixels
+3. Choisir le mode de compression : **Lossless** ou **Lossy (75%)**
+4. Les fichiers `.webp` sont générés dans un dossier `resize-output/` à côté des originaux
 
-The output folder opens automatically in Finder when processing is complete.
+Le dossier de sortie s'ouvre automatiquement dans le Finder une fois le traitement terminé.
 
-## Supported formats
+## Formats supportés
 
 | Direction | Formats |
 |-----------|---------|
-| Input | Any format supported by macOS (PNG, JPEG, TIFF, HEIC, WebP…) |
-| Output | WebP |
+| Entrée | Tout format reconnu par macOS (PNG, JPEG, TIFF, HEIC, WebP…) |
+| Sortie | WebP |
 
-## License
+## Licence
 
-This project is distributed under a custom **No Derivatives** license. You are free to use the software as-is, but modification and redistribution of modified versions are not permitted. See [LICENSE](LICENSE) for details.
+Ce projet est distribué sous une licence personnalisée **No Derivatives**. L'utilisation du logiciel tel quel est libre, mais toute modification et redistribution de versions modifiées sont interdites. Voir [LICENSE](LICENSE) pour les détails.
